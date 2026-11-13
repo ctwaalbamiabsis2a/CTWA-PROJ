@@ -21,7 +21,7 @@ a {
 .sidebar {
     width: 235px;
     background: white;
-    border-right: 1px solid #e7ebf2;
+    border-right: 2px solid #60a5fa;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -37,7 +37,9 @@ a {
     gap: 10px;
     font-size: 21px;
     font-weight: bold;
-    padding: 0 8px 40px;
+    padding: 0 8px 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #60a5fa;
 }
 
 .brand-mark {
@@ -59,40 +61,64 @@ a {
 .sidebar nav {
     display: grid;
     gap: 7px;
+    padding: 10px;
+    background: #2459d3;
+    border: 2px solid #60a5fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(36, 89, 211, 0.15);
+    margin-bottom: 20px;
 }
 
-.sidebar nav a,
-.logout {
+.sidebar nav::after {
+    content: '';
     display: block;
-    padding: 13px 11px;
-    border-radius: 8px;
-    color: #68748a;
+    margin-top: 5px;
+    border-bottom: 2px solid #60a5fa;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px 11px;
+    border-radius: 6px;
+    color: #ffffff;
     font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s ease;
 }
 
 .sidebar nav a:hover {
-    background: #edf3ff;
-    color: #2459d3;
+    background: #1745ad;
+    color: #ffffff;
 }
 
 .side-bottom {
     margin-top: auto;
+    display: grid;
+    gap: 10px;
 }
 
 .profile-mini {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 15px 5px;
-    border-top: 1px solid #eee;
+    padding: 12px;
+    background: #2459d3;
+    border: 2px solid #60a5fa;
+    border-radius: 10px;
+    color: white;
     font-size: 12px;
+    box-shadow: 0 4px 12px rgba(36, 89, 211, 0.15);
 }
 
 .profile-mini small,
 .top-user small {
     display: block;
-    color: #8993a5;
+    color: #dbeafe;
     margin-top: 4px;
+}
+
+.profile-mini b {
+    color: white;
 }
 
 .avatar {
@@ -107,9 +133,27 @@ a {
     flex-shrink: 0;
 }
 
+.profile-mini .avatar {
+    background: white;
+    color: #2459d3;
+}
+
 .logout {
-    border-top: 1px solid #eee;
-    color: #777;
+    display: block;
+    padding: 12px 14px;
+    background: #2459d3;
+    border: 2px solid #60a5fa;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    box-shadow: 0 4px 12px rgba(36, 89, 211, 0.15);
+    transition: background 0.2s ease;
+}
+
+.logout:hover {
+    background: #1745ad;
+    color: white;
 }
 
 /* MAIN CONTENT */
@@ -120,22 +164,30 @@ a {
 }
 
 .topbar {
-    height: 85px;
+    height: 95px;
+    padding: 0 24px;
+    background: #2459d3;
+    color: white;
+    border: 2px solid #60a5fa;
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 22px;
     margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(36, 89, 211, 0.15);
 }
 
 .topbar h1 {
-    font-size: 25px;
-    margin-top: 5px;
+    font-size: 24px;
+    margin-top: 3px;
+    color: white;
 }
 
 .eyebrow {
     font-size: 10px;
     letter-spacing: 1px;
-    color: #9aa3b3;
+    color: #bfdbfe;
     font-weight: bold;
 }
 
@@ -144,6 +196,16 @@ a {
     align-items: center;
     gap: 10px;
     font-size: 12px;
+    color: white;
+}
+
+.top-user .avatar {
+    background: white;
+    color: #2459d3;
+}
+
+.top-user small {
+    color: #dbeafe;
 }
 
 .welcome-row {
@@ -175,11 +237,11 @@ a {
 
 .stat-card {
     background: white;
-    border: 1px solid #e7ebf2;
+    border: 2px solid #60a5fa;
     border-radius: 12px;
     padding: 22px;
     min-height: 135px;
-    box-shadow: 0 5px 20px rgba(20, 40, 80, .04);
+    box-shadow: 0 5px 20px rgba(36, 89, 211, .08);
 }
 
 .stat-card p {
@@ -196,11 +258,11 @@ a {
 
 .panel {
     background: white;
-    border: 1px solid #e7ebf2;
+    border: 2px solid #60a5fa;
     border-radius: 12px;
     padding: 21px;
     margin-bottom: 20px;
-    box-shadow: 0 5px 20px rgba(20, 40, 80, .04);
+    box-shadow: 0 5px 20px rgba(36, 89, 211, .08);
 }
 
 .panel h3 {
@@ -229,22 +291,23 @@ table {
 }
 
 th {
-    background: #fafbfe;
-    color: #8791a3;
+    background: #eff6ff;
+    color: #475569;
     text-align: left;
     font-size: 11px;
     padding: 14px 12px;
+    border-bottom: 2px solid #60a5fa;
 }
 
 td {
     padding: 14px 12px;
-    border-bottom: 1px solid #edf0f5;
+    border-bottom: 1.5px solid #93c5fd;
     font-size: 12px;
     color: #465167;
 }
 
 tbody tr:hover {
-    background: #fafbff;
+    background: #f0f7ff;
 }
 
 .text-link {
@@ -278,7 +341,7 @@ tbody tr:hover {
 .secondary {
     background: #f1f3f8;
     color: #465167;
-    border: 1px solid #e0e4ec;
+    border: 2px solid #60a5fa;
 }
 
 .full {
@@ -286,7 +349,7 @@ tbody tr:hover {
     margin-top: 12px;
 }
 
-/* FORMS */
+/* FORMS - Clearly visible shadows on text fields */
 
 label {
     display: block;
@@ -301,17 +364,34 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #dfe4ed;
+    border: 1px solid #cbdaf2;
     border-radius: 8px;
     font-size: 12px;
     outline: none;
-    background: white;
+    background: #ffffff;
+
+    /* More noticeable shadow around the entire field */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+
+    transition: box-shadow 0.2s ease, border-color 0.2s ease,
+                background 0.2s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 5px 13px rgba(36, 89, 211, 0.22);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
     border-color: #2459d3;
+    background: #ffffff;
+    box-shadow:
+        0 5px 15px rgba(36, 89, 211, 0.28),
+        0 0 0 2px rgba(36, 89, 211, 0.18);
 }
 
 textarea {
@@ -361,8 +441,9 @@ textarea {
 .status {
     display: inline-block;
     padding: 6px 10px;
-    background: #edf1f7;
-    color: #69758a;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1.5px solid #60a5fa;
     border-radius: 20px;
     font-size: 11px;
     font-weight: bold;
@@ -377,18 +458,20 @@ textarea {
     color: #159b68;
     font-size: 12px;
     margin-bottom: 15px;
+    border: 1.5px solid #86efac;
 }
 
 .alert.error {
     background: #ffebed;
     color: #d84b59;
+    border: 1.5px solid #fca5a5;
 }
 
 /* TRACKING */
 
 .tracking-card {
     background: #f9fbff;
-    border: 1px solid #e7ebf2;
+    border: 2px solid #60a5fa;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -421,7 +504,7 @@ textarea {
 
 .bar-track {
     height: 8px;
-    background: #edf0f5;
+    background: #dbeafe;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -451,7 +534,8 @@ textarea {
     background: white;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(20, 40, 80, .12);
+    box-shadow: 0 20px 60px rgba(20, 40, 80, .14);
+    border: 2px solid #60a5fa;
 }
 
 .auth-intro {
@@ -517,6 +601,7 @@ textarea {
     background: white;
     padding: 30px;
     border-radius: 12px;
+    border: 2px solid #60a5fa;
 }
 
 /* RESPONSIVE */
@@ -543,10 +628,13 @@ textarea {
         position: static;
         width: 100%;
         padding: 12px;
+        border-right: none;
+        border-bottom: 2px solid #60a5fa;
     }
 
     .brand {
         padding-bottom: 15px;
+        border-bottom: none;
     }
 
     .sidebar nav {
